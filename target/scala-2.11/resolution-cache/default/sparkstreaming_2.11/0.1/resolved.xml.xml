@@ -4,7 +4,7 @@
 		module="sparkstreaming_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20190818225930"
+		publication="20190819210446"
 	>
 		<description>
 		SparkStreaming
@@ -35,6 +35,8 @@
 		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.0.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.0.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-streaming-kafka-0-8_2.11" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.kafka" name="kafka_2.11" rev="1.0.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-streaming-twitter_2.11" rev="1.6.1" conf="compile->default(compile)"/>
 		<dependency org="org.twitter4j" name="twitter4j-core" rev="3.0.3" conf="compile->default(compile)"/>
 		<dependency org="org.twitter4j" name="twitter4j-stream" rev="3.0.3" conf="compile->default(compile)"/>

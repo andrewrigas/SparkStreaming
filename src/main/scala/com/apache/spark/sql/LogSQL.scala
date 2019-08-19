@@ -17,7 +17,7 @@ object LogSQL {
   def main(args: Array[String]) {
 
     // Create the context with a 1 second batch size
-    val conf = new SparkConf().setAppName("LogSQL").setMaster("local[*]").set("spark.sql.warehouse.dir", "file:///C:/tmp")
+    val conf = new SparkConf().setAppName("LogSQL").setMaster("local[*]")
     val ssc = new StreamingContext(conf, Seconds(1))
     
     setupLogging()
@@ -74,7 +74,7 @@ object LogSQL {
     })
     
     // Kick it off
-    ssc.checkpoint("C:/checkpoint/")
+    ssc.checkpoint("src/main/resources/checkpoint/")
     ssc.start()
     ssc.awaitTermination()
   }
